@@ -10,5 +10,5 @@ let start = () => {
       i++;
     }
   }
-  console.log(arr);
+  document.querySelector("#result").innerHTML = "抽到的学生学号为" + arr;
 }
