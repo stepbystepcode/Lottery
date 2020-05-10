@@ -1,3 +1,4 @@
+let history = [];
 let start = () => {
   let number;
   let arr = [];
@@ -5,7 +6,17 @@ let start = () => {
   for (let index = 0; index < i; index++) {
     number = Math.floor(Math.random() * (document.querySelector("#max").value) + 1);
     if (arr.indexOf(number) == -1) {
-      arr.push(number);
+      if (document.querySelector(".mui-switch").checked) {
+        if (history.indexOf(number) == -1) {
+          arr.push(number);
+          history.push(number);
+        } else {
+          i++;
+        }
+      } else {
+        arr.push(number);
+        history.push(number);
+      }
     } else {
       i++;
     }
