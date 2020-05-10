@@ -16,3 +16,13 @@ label {
 input,textarea{
   vertical-align: top;
 }
+h1{
+  margin: 1rem;
+}
+button{
+  margin-bottom: 1rem;
+}
+#result{
+  width: 70%;
+  margin-left: 15%;
+}

@@ -10,5 +10,6 @@ let start = () => {
       i++;
     }
   }
-  document.querySelector("#result").innerHTML = "抽到的学生学号为" + arr;
+  document.querySelector("#result").style.display = "block";
+  document.querySelector("#result").innerHTML = "抽到的学生学号为<br>" + arr;
 }
