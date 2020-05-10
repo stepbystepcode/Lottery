@@ -3,25 +3,33 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>抽号器</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <div class="block">
-    <label for="max">总人数：</label>
-    <input type="number" name="max" id="max" value="43">
+  <div class="input-group flex-nowrap block">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="addon-wrapping">总人数：</span>
+    </div>
+    <input type="number" class="form-control" placeholder="Username" aria-label="Username"
+      aria-describedby="addon-wrapping" name="max" id="max" value="43">
   </div>
-  <br>
-  <div class="block">
-    <label for="amount">抽号个数：</label>
-    <input type="number" name="amount" id="amount" value="5">
+  <div class="input-group flex-nowrap block">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="addon-wrapping">抽号个数：</span>
+    </div>
+    <input type="number" class="form-control" placeholder="Username" aria-label="Username"
+      aria-describedby="addon-wrapping" name="amount" id="amount" value="5">
   </div>
-  <br>
-  <button onclick="start()">抽号</button>
-  <div id="result"></div>
-  <script src="main.js"></script>
+  <button onclick="start()" type="button" class="btn btn-primary">抽号</button>
+  <div id="result" class="alert alert-primary"></div>
+  <script src="./jquery.slim.min.js"></script>
+  <script src="./popper.min.js"></script>
+  <script src="./bootstrap.min.js"></script>
+  <script src="./main.js"></script>
 </body>
 
 </html>
